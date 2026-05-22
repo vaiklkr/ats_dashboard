@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo">Talent<span>OS</span></div>
+
+  <a href="dashboard.html" class="active"><i class="fa-solid fa-house"></i> Dashboard</a>
+  <a href="job.html"><i class="fa-solid fa-briefcase"></i> Job Listings</a>
+  <a href="candidates.html"><i class="fa-solid fa-users"></i> Candidates</a>
+  <a href="index.html"><i class="fa-solid fa-user-lock"></i> Login</a>
+
+  <div class="sidebar-bottom">
+    <button id="darkModeToggle" class="dark-mode-toggle">
+      <i class="fa-solid fa-moon"></i> Dark Mode
+    </button>
+    <div class="profile-card">
+      <div class="profile-img"></div>
+      <div class="profile-info">
+        <div style="font-size: 0.85rem; font-weight: 700; color: white;">Alex Rivera</div>
+        <div style="font-size: 0.75rem; color: #94a3b8;">HR Admin</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="topbar">
+    <button id="menuToggle" class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    <h1>Dashboard</h1>
+    <div class="date-badge" id="currentDate"></div>
+  </div>
+
+  <div class="cards">
+    <div class="card stat-card">
+      <div class="icon-box bg-purple"><i class="fa-solid fa-briefcase"></i></div>
+      <h3>Total Jobs</h3>
+      <p id="totalJobs">12</p>
+    </div>
+    <div class="card stat-card">
+      <div class="icon-box bg-green"><i class="fa-solid fa-users"></i></div>
+      <h3>Total Candidates</h3>
+      <p id="totalCandidates">148</p>
+    </div>
+    <div class="card stat-card">
+      <div class="icon-box bg-orange"><i class="fa-solid fa-calendar-check"></i></div>
+      <h3>Interviews</h3>
+      <p id="totalInterviews">32</p>
+    </div>
+  </div>
+
+  <div class="dashboard-grid">
+    <div class="chart-container">
+      <h3 style="font-size: 1rem; margin-bottom: 20px;">Hiring Statistics</h3>
+      <div style="height: 300px;">
+        <canvas id="hiringChart"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <h3 style="font-size: 1rem; margin-bottom: 20px;">Pipeline Status</h3>
+      <div style="height: 300px;">
+        <canvas id="pipelineChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-container" style="margin-top: 32px;">
+    <div style="display: flex; justify-content: space-between; padding: 20px; align-items: center;">
+      <h3 style="font-size: 1rem;">Recent Applications</h3>
+      <a href="candidates.html" class="view-all">View All</a>
+    </div>
+    <table id="recentApplicationsTable">
+      <thead>
+        <tr><th>Candidate</th><th>Applied Role</th><th>Status</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 TalentOS. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Help Center</a>
+        <a href="#">Contact Support</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

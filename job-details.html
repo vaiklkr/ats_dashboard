@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Details</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo">Talent<span>OS</span></div>
+  <a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a>
+  <a href="job.html" class="active"><i class="fa-solid fa-briefcase"></i> Job Listings</a>
+  <a href="candidates.html"><i class="fa-solid fa-users"></i> Candidates</a>
+</div>
+
+<div class="main">
+  <div class="topbar">
+    <a href="job.html" style="text-decoration: none; color: var(--text-color);"><i class="fa-solid fa-arrow-left"></i> Back to Jobs</a>
+    <h1>Job Role Details</h1>
+  </div>
+
+  <div class="dashboard-grid">
+    <div class="left-col">
+      <div class="detail-section">
+        <div style="display: flex; justify-content: space-between; align-items: start;">
+          <div>
+            <h2 style="margin-bottom: 10px;">Frontend Developer</h2>
+            <p style="color: var(--sidebar-text);"><i class="fa-solid fa-location-dot"></i> Pune | Full-time</p>
+          </div>
+          <span class="status open">Open</span>
+        </div>
+        
+        <h4 style="margin-top: 30px; margin-bottom: 15px;">Description</h4>
+        <p style="line-height: 1.6; color: var(--sidebar-text);">
+          We are looking for a skilled Frontend Developer to join our core team. You will be responsible for building high-quality interfaces using React.js and ensuring a seamless user experience across all devices.
+        </p>
+
+        <h4 style="margin-top: 25px; margin-bottom: 15px;">Requirements</h4>
+        <ul style="list-style-position: inside; color: var(--sidebar-text); line-height: 1.8;">
+          <li>Proficiency in HTML, CSS, and JavaScript (ES6+)</li>
+          <li>Experience with React.js and Redux</li>
+          <li>Understanding of responsive design</li>
+          <li>Familiarity with RESTful APIs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="right-col">
+      <div class="detail-section" style="text-align: center;">
+        <h3 style="margin-bottom: 25px;">Apply Manually</h3>
+        <form id="manualApplyForm">
+          <div class="form-group">
+            <label style="font-size: 0.85rem; font-weight: 600;">Full Name</label>
+            <input type="text" placeholder="John Doe" required style="margin-top: 5px;">
+          </div>
+          <div class="form-group">
+            <label style="font-size: 0.85rem; font-weight: 600;">Email Address</label>
+            <input type="email" placeholder="john@example.com" required style="margin-top: 5px;">
+          </div>
+          <div class="form-group">
+            <label style="font-size: 0.85rem; font-weight: 600;">Resume URL</label>
+            <input type="text" placeholder="https://..." style="margin-top: 5px;">
+          </div>
+          <button type="submit" style="width: 100%;">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 TalentOS. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+<script>
+document.getElementById('manualApplyForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Application submitted successfully! Redirecting to job listings.');
+  window.location.href = "job.html"; // Redirect to job listings page
+});
+</script>
+
+</body>
+</html>

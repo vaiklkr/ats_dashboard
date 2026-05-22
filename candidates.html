@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Candidates</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo">Talent<span>OS</span></div>
+
+  <a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a>
+  <a href="job.html"><i class="fa-solid fa-briefcase"></i> Job Listings</a>
+  <a href="candidates.html" class="active"><i class="fa-solid fa-users"></i> Candidates</a>
+
+  <div class="sidebar-bottom">
+    <button id="darkModeToggle" class="dark-mode-toggle">
+      <i class="fa-solid fa-moon"></i> Dark Mode
+    </button>
+    <div class="profile-card">
+      <div class="profile-img"></div>
+      <div class="profile-info">
+        <div style="font-size: 0.85rem; font-weight: 700; color: white;">Alex Rivera</div>
+        <div style="font-size: 0.75rem; color: #94a3b8;">HR Admin</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="topbar">
+    <button id="menuToggle" class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    <h1>Candidates</h1>
+  </div>
+
+  <div class="filter-container">
+    <input type="text" id="searchInput" placeholder="Search by name or role..." style="flex: 2;">
+    <select id="statusFilter" class="search-bar" style="flex: 1; height: 48px; border-radius: 6px; border: 1px solid var(--input-border); padding: 0 12px; background: var(--white); color: var(--text-color);">
+      <option value="">All Statuses</option>
+      <option value="hired">Hired</option>
+      <option value="pending">Pending</option>
+      <option value="rejected">Rejected</option>
+    </select>
+  </div>
+
+  <div class="table-container">
+
+    <table id="candidateTable">
+
+      <tr>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Score</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+
+      <tr>
+        <td>Rahul Sharma</td>
+        <td>Frontend Developer</td>
+        <td>85%</td>
+        <td><span class="status hired">Hired</span></td>
+        <td>
+          <a href="candidate-details.html">
+            <button>View</button>
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Priya Patel</td>
+        <td>UI Designer</td>
+        <td>72%</td>
+        <td><span class="status pending">Pending</span></td>
+        <td>
+          <a href="candidate-details.html">
+            <button>View</button>
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Amit Verma</td>
+        <td>React Developer</td>
+        <td>55%</td>
+        <td><span class="status rejected">Rejected</span></td>
+        <td>
+          <a href="candidate-details.html">
+            <button>View</button>
+          </a>
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 TalentOS. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Help Center</a>
+        <a href="#">Contact Support</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jobs</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo">Talent<span>OS</span></div>
+
+  <a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a>
+  <a href="job.html" class="active"><i class="fa-solid fa-briefcase"></i> Job Listings</a>
+  <a href="candidates.html"><i class="fa-solid fa-users"></i> Candidates</a>
+
+  <div class="sidebar-bottom">
+    <button id="darkModeToggle" class="dark-mode-toggle">
+      <i class="fa-solid fa-moon"></i> Dark Mode
+    </button>
+    <div class="profile-card">
+      <div class="profile-img"></div>
+      <div class="profile-info">
+        <div style="font-size: 0.85rem; font-weight: 700; color: white;">Alex Rivera</div>
+        <div style="font-size: 0.75rem; color: #94a3b8;">HR Admin</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="topbar">
+    <button id="menuToggle" class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    <h1>Total Jobs</h1>
+  </div>
+
+  <div class="filter-container">
+    <input type="text" id="jobSearchInput" placeholder="Search by job title or location..." style="flex: 2;">
+    <select id="jobStatusFilter" style="flex: 1; height: 48px; border-radius: 6px; border: 1px solid var(--input-border); padding: 0 12px; background: var(--white); color: var(--text-color);">
+      <option value="">All Statuses</option>
+      <option value="open">Open</option>
+      <option value="closed">Closed</option>
+      <option value="draft">Draft</option>
+    </select>
+  </div>
+
+  <div class="job-grid">
+
+    <div class="job-card">
+      <span class="status open">Open</span>
+      <h3>Frontend Developer</h3>
+      <p>Pune</p>
+      <p>2+ Years</p>
+      <div style="margin-top: 15px;">
+        <a href="job-details.html"><button>View Details</button></a>
+      </div>
+    </div>
+
+    <div class="job-card">
+      <span class="status open">Open</span>
+      <h3>Backend Developer</h3>
+      <p>Mumbai</p>
+      <p>3+ Years</p>
+      <div style="margin-top: 15px;">
+        <a href="job-details.html"><button>View Details</button></a>
+      </div>
+    </div>
+
+    <div class="job-card">
+      <span class="status closed">Closed</span>
+      <h3>UI/UX Designer</h3>
+      <p>Remote</p>
+      <p>1+ Years</p>
+      <div style="margin-top: 15px;">
+        <a href="job-details.html"><button>View Details</button></a>
+      </div>
+    </div>
+
+    <div class="job-card">
+      <span class="status open">Open</span>
+      <h3>React Native Developer</h3>
+      <p>Bangalore</p>
+      <p>4+ Years</p>
+      <div style="margin-top: 15px;">
+        <a href="job-details.html"><button>View Details</button></a>
+      </div>
+    </div>
+
+    <div class="job-card">
+      <span class="status draft">Draft</span>
+      <h3>Product Manager</h3>
+      <p>Pune</p>
+      <p>5+ Years</p>
+      <div style="margin-top: 15px;">
+        <a href="job-details.html"><button>View Details</button></a>
+      </div>
+    </div>
+
+    <div class="job-card">
+      <span class="status open">Open</span>
+      <h3>DevOps Engineer</h3>
+      <p>Hyderabad</p>
+      <p>3+ Years</p>
+      <div style="margin-top: 15px;">
+        <a href="job-details.html"><button>View Details</button></a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 TalentOS. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Help Center</a>
+        <a href="#">Contact Support</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

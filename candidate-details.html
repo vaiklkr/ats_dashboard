@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Candidate Details</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo">Talent<span>OS</span></div>
+  <a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a>
+  <a href="job.html"><i class="fa-solid fa-briefcase"></i> Job Listings</a>
+  <a href="candidates.html" class="active"><i class="fa-solid fa-users"></i> Candidates</a>
+</div>
+
+<div class="main">
+  <div class="topbar">
+    <a href="candidates.html" style="text-decoration: none; color: var(--text-color);"><i class="fa-solid fa-arrow-left"></i> Back to List</a>
+    <h1>Candidate Profile</h1>
+  </div>
+
+  <div class="detail-section">
+    <div style="display: flex; gap: 30px; align-items: start;">
+      <div style="width: 120px; height: 120px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+        RS
+      </div>
+      <div style="flex: 1;">
+        <h2 style="margin-bottom: 5px;">Rahul Sharma</h2>
+        <p style="color: var(--sidebar-text); margin-bottom: 15px;">Frontend Developer | Applied 2 days ago</p>
+        <span class="status hired">Hired</span>
+      </div>
+      <div>
+        <button>Download Resume</button>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--table-border);">
+      <div>
+        <h4 style="color: var(--sidebar-text); margin-bottom: 8px;">Email</h4>
+        <p>rahul.sharma@example.com</p>
+      </div>
+      <div>
+        <h4 style="color: var(--sidebar-text); margin-bottom: 8px;">Phone</h4>
+        <p>+91 98765 43210</p>
+      </div>
+      <div>
+        <h4 style="color: var(--sidebar-text); margin-bottom: 8px;">Experience</h4>
+        <p>3.5 Years</p>
+      </div>
+      <div>
+        <h4 style="color: var(--sidebar-text); margin-bottom: 8px;">Location</h4>
+        <p>Pune, Maharashtra</p>
+      </div>
+      <div>
+        <h4 style="color: var(--sidebar-text); margin-bottom: 8px;">ATS Score</h4>
+        <p style="color: var(--success-color); font-weight: 700;">85%</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-section">
+    <h3>Cover Letter / Summary</h3>
+    <p style="margin-top: 15px; line-height: 1.6;">
+      Highly motivated Frontend Developer with a strong foundation in React and modern UI/UX principles. Seeking a challenging role at TalentOS to leverage my skills in creating performant web applications.
+    </p>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 TalentOS. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
